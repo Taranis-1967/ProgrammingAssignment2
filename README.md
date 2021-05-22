@@ -103,3 +103,38 @@ In order to complete this assignment, you must do the following:
 ### Grading
 
 This assignment will be graded via peer assessment.
+
+###Resolution: makeCacheMatrix
+
+### MATRIX INVERSION FUNCTION
+
+makeCacheMatrix <- function(x=matrix()){
+  inversa <- NULL
+  set <- function(y){
+    x <<- y
+    inversa <<- NULL
+  }
+  get <- function() x
+  setInversa <- function(inversa) inversa <<- inversa
+  getInversa <- function() inversa
+  list(set=set, get=get, setInversa=setInversa, getInversa=getInversa)
+}
+
+cacheSolve <- function(x, ...){
+  inversa <- x$getInversa()
+  if(!is.null(inversa)){
+    message("obtendo dados em cache")
+    return(inversa)
+  }
+  mat <- x$get()
+  inversa <- solve(mat, ...)
+  x$setInversa(inversa)
+  inversa
+}
+
+### APPLICATION
+
+pmatrix<-makeCacheMatrix(matrix(1:4, nrow = 2, ncol = 2))
+pmatrix$get()
+pmatrix$getInversa()
+cacheSolve(pmatrix) 
