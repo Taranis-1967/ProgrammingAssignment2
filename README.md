@@ -138,3 +138,6 @@ pmatrix<-makeCacheMatrix(matrix(1:4, nrow = 2, ncol = 2))
 pmatrix$get()
 pmatrix$getInversa()
 cacheSolve(pmatrix) 
+
+
+[makeCacheMatrix.txt](https://github.com/Taranis-1967/ProgrammingAssignment2/files/6527338/makeCacheMatrix.txt)
