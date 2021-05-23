@@ -109,9 +109,9 @@ This assignment will be graded via peer assessment.
 ### MATRIX INVERSION FUNCTION
 
 makeCacheMatrix <- function(x=matrix()){
-  inversa <- NULL
-  set <- function(y){
-    x <<- y
+	inversa <- NULL
+	set <- function(y){
+	x <<- y
     inversa <<- NULL
   }
   get <- function() x
