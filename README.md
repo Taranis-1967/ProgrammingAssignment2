@@ -107,15 +107,8 @@ This assignment will be graded via peer assessment.
 ###Resolution: makeCacheMatrix
 
 
-## Caching the Inverse of a Matrix:
-## Matrix inversion is usually a costly computation and there may be some 
-## benefit to caching the inverse of a matrix rather than compute it repeatedly.
-## Below are a pair of functions that are used to create a special object that 
-## stores a matrix and caches its inverse.
-
-```ruby
 makeCacheMatrix <- function(x = matrix()) {
-  ## This function creates a special "matrix" object that can cache its inverse.
+## This function creates a special "matrix" object that can cache its inverse.
   inv <- NULL
   set <- function(y) {
     x <<- y
@@ -129,6 +122,9 @@ makeCacheMatrix <- function(x = matrix()) {
        setInverse = setInverse,
        getInverse = getInverse)
 }
+
+
+
 
 ## This function computes the inverse of the special "matrix" created by 
 ## makeCacheMatrix above. If the inverse has already been calculated (and the 
@@ -146,11 +142,5 @@ cacheSolve <- function(x, ...) {
   x$setInverse(inv)
   inv
 }
-'''
 
-
-[makeCacheMatrix.docx](https://github.com/Taranis-1967/ProgrammingAssignment2/files/6534057/makeCacheMatrix.docx)
-
-
-
-
+[makeCacheMatrix_adjusted.docx](https://github.com/Taranis-1967/ProgrammingAssignment2/files/6540351/makeCacheMatrix_adjusted.docx)
